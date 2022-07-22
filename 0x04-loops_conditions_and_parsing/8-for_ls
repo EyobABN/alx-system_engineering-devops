@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# A script demostraring a shellcheck-compliant use of a for loop
+
+for item in *
+do
+	echo "${item#*-}"
+done
