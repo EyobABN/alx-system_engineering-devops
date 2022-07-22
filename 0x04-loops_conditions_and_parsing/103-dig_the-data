@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# simple parsing of apache log files to extract ip and http_code
+
+FILENAME="apache-access.log"
+awk '{print $1,$9}' $FILENAME | sort | uniq -c | sort -r
