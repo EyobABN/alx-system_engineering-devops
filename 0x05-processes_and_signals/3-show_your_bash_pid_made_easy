@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# a way of viewing pid of a process that is easier than ps -H aux | grep -w <name>
+
+pgrep -l bash
