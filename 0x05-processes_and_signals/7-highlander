@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# print "To infinity and beyond" indefinitely with a 2 second gap in between
+
+trap 'echo I am invincible!!!' SIGTERM
+while :
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
