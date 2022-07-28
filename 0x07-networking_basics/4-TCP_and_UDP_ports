@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# list all listening sockets with the name and PID to which each socket belongs
+
+sudo netstat -plnt
