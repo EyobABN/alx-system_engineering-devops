@@ -27,7 +27,7 @@ else
 fi
 
 # Insert new HAproxy configuration directives into config file
-echo "$HAPROXY_LB_CONFIG" >> /etc/haproxy/haproxy.cfg
+echo "$HAPROXY_LB_CONFIG" >> "$CONFIG_FILE"
 
 # Start HAproxy, or restart if already running
 if [ "$(pgrep -c haproxy)" -le 0 ]; then
