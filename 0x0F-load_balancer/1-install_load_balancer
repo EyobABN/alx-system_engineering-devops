@@ -3,7 +3,7 @@
 apt-get update
 apt-get -y install --no-install-recommends software-properties-common
 add-apt-repository -y ppa:vbernat/haproxy-2.6
-apt-get -y install haproxy=2.6.\*
+apt-get -y install haproxy
 
 DOMAIN_NAME='thejob.tech'
 INIT_FILE='/etc/default/haproxy'
