@@ -7,7 +7,7 @@ ufw allow 'Nginx HTTP'
 mkdir -p /var/www/html /var/www/error
 chmod -R 755 /var/www
 echo 'Hello World!' > /var/www/html/index.html
-echo -e "Ceci n\x27est pas une page" > /var/www/error/404.html
+echo -e "Ceci n'est pas une page" > /var/www/error/404.html
 
 SERVER_CONFIG=\
 "server {
@@ -27,7 +27,7 @@ SERVER_CONFIG=\
 		rewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;
 	}
 
-	error_page 404 /404.html
+	error_page 404 /404.html;
 	location = /404.html {
 		root /var/www/error/;
 		internal;
