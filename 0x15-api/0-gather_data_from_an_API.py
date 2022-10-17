@@ -36,3 +36,11 @@ if __name__ == "__main__":
             if todo.get('completed') is True:
                 numberOfDone += 1
                 done.append('\t ' + todo.get('title'))
+        print(
+            'Employee {} is done with tasks({}/{}):'.format(
+                nameOfEmployee,
+                numberOfDone,
+                numberOfTasks
+            )
+        )
+        [print(i) for i in done]
