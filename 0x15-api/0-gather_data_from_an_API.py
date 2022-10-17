@@ -3,9 +3,9 @@
     Using the https://jsonplaceholder.typicode.com/guide/ API, for a given
     employee ID, returns information about his/her TODO list progress.
 '''
+import json
 import requests
 import sys
-import json
 
 
 API_URL = 'https://jsonplaceholder.typicode.com'
