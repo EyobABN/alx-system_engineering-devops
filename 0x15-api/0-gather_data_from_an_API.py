@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-'''Using an API, for a given employee ID, returns information about \
-his/her TODO list progress.
+'''A script that gathers data from an API.
 '''
 import json
 import requests
@@ -11,7 +10,7 @@ API_URL = 'https://jsonplaceholder.typicode.com'
 '''The API's URL'''
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     '''
         Execute if not imported as a module
     '''
@@ -35,6 +34,5 @@ if __name__ == "__main__":
             if todo.get('completed') is True:
                 numberOfDone += 1
                 done.append('\t ' + todo.get('title'))
-        print(f'Employee {nameOfEmployee} is done with tasks\
-({numberOfDone}/{numberOfTasks}):')
+        print(f'Employee {nameOfEmployee} is done with tasks({numberOfDone}/{numberOfTasks}):')
         [print(i) for i in done]
