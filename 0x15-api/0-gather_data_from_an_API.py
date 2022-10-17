@@ -13,6 +13,9 @@ API_URL = 'https://jsonplaceholder.typicode.com'
 
 
 if __name__ == "__main__":
+    '''
+        Execute if not imported as a module
+    '''
     if len(sys.argv) > 1:
         ID = sys.argv[1]
         user_res = requests.get(
