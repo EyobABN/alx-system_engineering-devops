@@ -1,7 +1,6 @@
 #!/usr/bin/python3
-"""
-    Gathers data from a given API
-"""
+'''Gathers data from a given API
+'''
 import json
 import requests
 import sys
