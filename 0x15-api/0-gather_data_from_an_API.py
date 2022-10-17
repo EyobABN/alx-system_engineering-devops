@@ -36,6 +36,5 @@ if __name__ == "__main__":
             if todo.get('completed') is True:
                 numberOfDone += 1
                 done.append('\t ' + todo.get('title'))
-        print(f'Employee {nameOfEmployee} is done with tasks\
-({numberOfDone}/{numberOfTasks}):')
+        print(f'Employee {nameOfEmployee} is done with tasks ({numberOfDone}/{numberOfTasks}):')
         [print(i) for i in done]
