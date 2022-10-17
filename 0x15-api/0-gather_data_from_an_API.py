@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''Gathers data from an API.
+'''A script that gathers data from an API.
 '''
 import json
 import requests
@@ -11,9 +11,6 @@ API_URL = 'https://jsonplaceholder.typicode.com'
 
 
 if __name__ == "__main__":
-    """
-        Execute if not imported as a module.
-    """
     if (len(sys.argv) > 1):
         ID = sys.argv[1]
         x = requests.get(
@@ -34,5 +31,6 @@ if __name__ == "__main__":
             if todo.get('completed') is True:
                 numberOfDone += 1
                 done.append('\t ' + todo.get('title'))
-        print(f'Employee {nameOfEmployee} is done with tasks ({numberOfDone}/{numberOfTasks}):')
+        print(f'Employee {nameOfEmployee} is done with tasks \
+({numberOfDone}/{numberOfTasks}):')
         [print(i) for i in done]
