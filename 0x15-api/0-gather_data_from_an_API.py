@@ -1,20 +1,18 @@
 #!/usr/bin/python3
-"""
-    Using the https://jsonplaceholder.typicode.com/guide/ API, for a given
-    employee ID, returns information about his/her TODO list progress.
-"""
+'''Gathers data from an API.
+'''
 import json
 import requests
 import sys
 
 
 API_URL = 'https://jsonplaceholder.typicode.com'
-"""The API's URL"""
+'''The API's URL.'''
 
 
 if __name__ == "__main__":
     """
-        Execute if not imported as a module
+        Execute if not imported as a module.
     """
     if (len(sys.argv) > 1):
         ID = sys.argv[1]
