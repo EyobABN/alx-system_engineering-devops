@@ -14,7 +14,7 @@ API_URL = 'https://jsonplaceholder.typicode.com'
 
 if __name__ == "__main__":
     '''
-        Execute if not imported as a module
+        Execute only if run as script.
     '''
     if len(sys.argv) > 1:
         ID = sys.argv[1]
