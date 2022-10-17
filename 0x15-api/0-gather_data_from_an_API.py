@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-'''A script that gathers data from an API.
+'''
+    Using the https://jsonplaceholder.typicode.com/guide/ API, for a given
+    employee ID, returns information about his/her TODO list progress.
 '''
 import json
 import requests
@@ -7,11 +9,14 @@ import sys
 
 
 API_URL = 'https://jsonplaceholder.typicode.com'
-'''The API's URL.'''
+'''The API's URL'''
 
 
 if __name__ == "__main__":
-    if (len(sys.argv) > 1):
+    '''
+        Execute if not imported as a module
+    '''
+    if len(sys.argv) > 1:
         ID = sys.argv[1]
         x = requests.get(
                 API_URL + '/users/' + ID + '/todos'
@@ -31,6 +36,6 @@ if __name__ == "__main__":
             if todo.get('completed') is True:
                 numberOfDone += 1
                 done.append('\t ' + todo.get('title'))
-        print(f'Employee {nameOfEmployee} is done with tasks \
+        print(f'Employee {nameOfEmployee} is done with tasks\
 ({numberOfDone}/{numberOfTasks}):')
         [print(i) for i in done]
