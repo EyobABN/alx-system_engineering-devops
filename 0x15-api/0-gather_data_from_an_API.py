@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-'''Using the https://jsonplaceholder.typicode.com/guide/ API, \
-for a given employee ID, returns information about \
+'''Using an API, for a given employee ID, returns information about \
 his/her TODO list progress.
 '''
 import json
