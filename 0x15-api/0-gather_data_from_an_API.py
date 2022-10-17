@@ -18,24 +18,23 @@ if __name__ == "__main__":
     '''
     if len(sys.argv) > 1:
         ID = sys.argv[1]
-        x = requests.get(
+        user_res = requests.get(
                 API_URL + '/users/' + ID + '/todos'
         )
-        todos = json.loads(x.text)
+        todos_res = requests.get(
+            API_URL + '/users/' + ID
+        ).text
+        todos = json.loads(user_res.text)
         done = []
         numberOfTasks = 0
         numberOfDone = 0
-        employee = json.loads(
-                requests.get(
-                    API_URL + '/users/' + ID
-                ).text
-        )
+        employee = json.loads(todos_res)
         nameOfEmployee = employee.get('name')
         for todo in todos:
             numberOfTasks += 1
             if todo.get('completed') is True:
                 numberOfDone += 1
-                done.append('\t ' + todo.get('title'))
+                done.append(todo.get('title'))
         print(
             'Employee {} is done with tasks({}/{}):'.format(
                 nameOfEmployee,
@@ -43,4 +42,4 @@ if __name__ == "__main__":
                 numberOfTasks
             )
         )
-        [print(i) for i in done]
+        [print('\t ' + i) for i in done]
