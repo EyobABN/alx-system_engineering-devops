@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """
-    Using the https://jsonplaceholder.typicode.com/guide/ API, for a given
-    employee ID, returns information about his/her TODO list progress
+    Gathers data from a given API
 """
 import json
 import requests
