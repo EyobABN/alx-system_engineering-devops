@@ -1,6 +1,8 @@
 #!/usr/bin/python3
-"""Using the https://jsonplaceholder.typicode.com/guide/ API, for a given
-employee ID, returns information about his/her TODO list progress"""
+"""
+    Using the https://jsonplaceholder.typicode.com/guide/ API, for a given
+    employee ID, returns information about his/her TODO list progress
+"""
 import json
 import requests
 import sys
@@ -11,6 +13,9 @@ API_URL = 'https://jsonplaceholder.typicode.com'
 
 
 if __name__ == "__main__":
+    """
+        Execute if not imported as a module
+    """
     if (len(sys.argv) > 1):
         ID = sys.argv[1]
         x = requests.get(
